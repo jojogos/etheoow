@@ -55,23 +55,12 @@ TDATA = (function () {
 
 //////////////events/////////////////////////////////////////////////////////////
 let { findInComunications,
-	getRelinVal, es
+	 es
      } = function () {
-		function setClickEvent(eleId, realFn) {
-			$(eleId).click(realFn);
-		}
 
-		function btn1Click(eFn) {
-			setClickEvent("#btn1", eFn);
-		}
-		function btn2Click(eFn) {
-			setClickEvent("#btn2", eFn);
-		}
-		function getRelinVal() {
-			return $("#relin").val();
-		}
 
 		return _rel = {
+	
 			findInComunications(fn) {
 				let dbs = store.get('comunications');
 				return dbs.find(fn);
@@ -80,16 +69,21 @@ let { findInComunications,
 				relinPressed(eFn, k_code = 13) {
 					$("#relin").keypress(e => {
 						if (e.keyCode == k_code || k_code == 'any') {
-							eFn(getRelinVal());
+							let val=$("#relin").val();
+							eFn(val);
 							return false;
 						}
 
 					})
 				},
 				doneClick(eFn) {
-					btn1Click(function () {
-						eFn(getRelinVal());
+					$("#btn1").click(() => {
+						let val=$("#relin").val();
+						eFn(val);
 					});
+				},
+				actionClick(eFn) {
+					$("#btn2").click(() => eFn());
 				}
 			}
 		};
