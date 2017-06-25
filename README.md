@@ -41,5 +41,6 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 - [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
 
 ## License
+git pull origin master ----allow-unrelated-histories
 
 [CC0 1.0 (Public Domain)](LICENSE.md)

@@ -31,3 +31,4 @@ $('document').ready(function () {
     dbs.forEach(v => namess.append($("<option>").val(v.name)));
 
 });
+
