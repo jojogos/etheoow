@@ -4,7 +4,7 @@ let { println,
 	flattenArray,
 	copy_obj,
 	get_all_proper,
-	getJSONfromUrl} = (function () {
+	getJSONfromUrl } = (function () {
 		let _iLibs = {
 			//////////////////////////////////////////////////////////   
 			println(...args) {
@@ -41,7 +41,6 @@ let { println,
 			},
 
 			/////////////////////////////////
-
 			flattenArray(arr) {
 				return arr.reduce(
 					(acc, val) => acc.concat(
@@ -68,7 +67,6 @@ let { println,
 				}
 				return props;
 			},
-
 			getJSONfromUrl(url) {
 				return new Promise(function (resolve, reject) {
 					$.ajax({
@@ -78,9 +76,6 @@ let { println,
 					});
 				});
 			}
-
 		}
-
 		return _iLibs
 	})();
-
