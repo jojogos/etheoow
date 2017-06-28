@@ -28,7 +28,8 @@ $('document').ready(function () {
 
     let dbs = store.get('comunications'),
         namess = $("#namess");
+    dbs.sort((a,b)=>a.name<b.name);
     dbs.forEach(v => namess.append($("<option>").val(v.name)));
-
+    
 });
 
